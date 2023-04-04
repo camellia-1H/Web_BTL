@@ -1,0 +1,134 @@
+﻿<!-- modal mua vé -->
+<!-- <button type="button" class="btn btn-pink btn--primary mt-90" data-toggle="modal" data-target=".modal-lgg">Large modal</button> -->
+<div class="modal fade modal-lgg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content br-10 over-hid text-center position-relative">
+            <div class="bg-pink d-flex align-items-center">
+                <button type="button" class="btn bg-transparent" data-dismiss="modal">
+                    <svg width="30"
+                         xmlns="http://www.w3.org/2000/svg"
+                         fill="none"
+                         viewBox="0 0 24 24"
+                         stroke-width="2"
+                         stroke="currentColor"
+                         aria-hidden="true"
+                         class="text-white">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
+                <span class="text-white fb-600">Mua vé xem phim</span>
+            </div>
+
+            <!-- begin validate sell -->
+            <div class="justify-content-between align-items-center opa-1 w-50 bg-warning cl-black p-3 br-5 one-seat z100 position-fixed">
+                <p class="h-100 m-0">You chỉ được chọn 1 ghế thôi</p>
+                <svg width="24"
+                     xmlns="http://www.w3.org/2000/svg"
+                     fill="none"
+                     viewBox="0 0 24 24"
+                     stroke-width="2"
+                     stroke="currentColor"
+                     aria-hidden="true"
+                     class="close-close">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </div>
+            <div class="justify-content-between align-items-center opa-1 w-50 bg-warning cl-black p-3 br-5 zero-seat z100 position-fixed">
+                <p class="h-100 m-0">You chọn 1 ghế đã chứ</p>
+                <svg width="24"
+                     xmlns="http://www.w3.org/2000/svg"
+                     fill="none"
+                     viewBox="0 0 24 24"
+                     stroke-width="2"
+                     stroke="currentColor"
+                     aria-hidden="true"
+                     class="close-close">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </div>
+
+            <!-- end validate sell -->
+
+            <div class="bg-black">
+                <div class="text-center">
+                    <div class="p-3 m-auto d-flex justify-content-center" style="border-bottom: 4px solid white; width: 16rem"></div>
+                    <p class="text-white pt-2">Màn hình</p>
+                </div>
+                <div class="w-lg-50 w-75 m-auto pt-5 pb-5">
+                 
+                    
+                        <button class="cinema-seat br-10 mr-3" style="width: 4rem; height: 4rem">
+                            <span class="text-white fs-13">F01</span>
+                        </button>
+                    
+
+                </div>
+            </div>
+            <div class="text-left p-3">
+                <div>
+                    <p class="cl-black">nguus</p>
+                    <div class="cl-age fs-13 mb-3">
+                        <span>15:25</span> ~ <span>17:35</span> . <span>30/03</span> .
+                        <span>Phòng chiếu P7</span>
+                    </div>
+                </div>
+                <div style="border-top: 1px solid var(--gray-400)">
+                    <div class="seat-selected pt-2 pb-2">Chỗ ngồi</div>
+                </div>
+                <div style="border-top: 1px solid var(--gray-400)" class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <p class="fs-15 pt-4">Tạm tính</p>
+                        <p class="cl-black">0Đ</p>
+                    </div>
+                    <button type="button" data-toggle="modal" class="btn-sell btn btn-pink fs-14 fb-600 p-6-25 h-75">
+                        <!-- data-target=".modal-success" -->
+                        Mua vé
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end Modal mua vé -->
+<!-- begin Modal mua vé thành công -->
+<div class="modal fade modal-success" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content br-10 over-hid text-center position-relative">
+            <div class="bg-pink d-flex align-items-center">
+                <button type="button" class="btn bg-transparent" data-dismiss="modal">
+                    <svg width="30"
+                         xmlns="http://www.w3.org/2000/svg"
+                         fill="none"
+                         viewBox="0 0 24 24"
+                         stroke-width="2"
+                         stroke="currentColor"
+                         aria-hidden="true"
+                         class="text-white">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+                    </svg>
+                </button>
+                <span class="text-white fb-600">Mua vé xem phim</span>
+            </div>
+            <div class="text-left p-3">
+                <div>
+                    <p class="cl-black">Shazam! Cơn thịnh nộ của các vị thần</p>
+                    <div class="cl-age fs-13 mb-3">
+                        <span>15:25</span> ~ <span>17:35</span> . <span>30/03</span> .
+                        <span>Phòng chiếu P7</span>
+                    </div>
+                </div>
+                <div style="border-top: 1px solid var(--gray-400)">
+                    <div class="seat-selected pt-2 pb-2">Chỗ ngồi</div>
+                </div>
+                <div style="border-top: 1px solid var(--gray-400)" class="d-flex justify-content-between align-items-center">
+                    <div>
+                        <p class="fs-15 pt-4">Tạm tính</p>
+                        <p class="cl-black">0Đ</p>
+                    </div>
+                    <button class="btn-sell btn btn-pink fs-14 fb-600 p-6-25 h-75">Mua vé</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end Modal mua vé thành công -->

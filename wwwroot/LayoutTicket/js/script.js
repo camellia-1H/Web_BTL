@@ -16,6 +16,52 @@ function hideMobileNav(e) {
     $('.navbar').removeClass('active');
 }
 
+// close alert
+
+$('.close-close').click(function () {
+    $(this).parent().hide();
+});
+
+// button cinema seat
+var countSeat = 0;
+$('.cinema-seat').click(function () {
+    if ($(this).hasClass('cinema-seat__active')) {
+        $(this).removeClass('cinema-seat__active');
+        countSeat--;
+    } else {
+        $(this).addClass('cinema-seat__active');
+        countSeat++;
+    }
+});
+
+// sell validate
+$('.btn-sell').click(function () {
+    if (countSeat == 0) {
+        $('.zero-seat').show(150).css({ display: 'flex', top: '50px', left: '25%' });
+    } else if (countSeat > 1) {
+        $('.one-seat').show(150).css({ display: 'flex', top: '50px', left: '25%' });
+    } else {
+        console.log('ngu1');
+        // $('.modal-success').on('shown.bs.modal', function (e) {
+        //     console.log('nguu2');
+        //     console.log(e);
+        //     $('.modal-lgg').attr('aria-hidden', true);
+        // });
+        var modalShow = new bootstrap.Modal(document.querySelector('.modal-lgg'), {});
+
+        modalShow._element.classList.remove('show', 'modal-backdrop');
+
+        var modalSuccess = new bootstrap.Modal(document.querySelector('.modal-success'), {
+            // backdrop: true,
+        });
+        modalSuccess.show();
+    }
+    setTimeout(function () {
+        jQuery('.one-seat').hide();
+        jQuery('.zero-seat').hide();
+    }, 4000);
+});
+
 $('.list-film__container').slick({
     ifinity: true,
     arrows: true,

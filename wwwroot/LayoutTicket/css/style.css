@@ -10,18 +10,19 @@
     padding: 0;
 }
 
-.navbar.active {
-    display: flex;
-}
+    .navbar.active {
+        display: flex;
+    }
 
 .nav-link {
     padding: 10px 0 10px 32px;
     color: var(--gray-600);
 }
 
-.nav-link:hover {
-    color: var(--gray-900);
-}
+    .nav-link:hover {
+        color: var(--gray-900);
+    }
+
 .dropdown-menu {
     top: 50px;
     right: 0;
@@ -32,17 +33,17 @@
     border: none;
 }
 
-.dropdown-menu::after {
-    content: '';
-    position: absolute;
-    top: -28px;
-    left: 32px;
-    width: 0;
-    height: 0;
-    border-width: 16px;
-    border-style: solid;
-    border-color: transparent transparent var(--gray-100) transparent;
-}
+    .dropdown-menu::after {
+        content: '';
+        position: absolute;
+        top: -28px;
+        left: 32px;
+        width: 0;
+        height: 0;
+        border-width: 16px;
+        border-style: solid;
+        border-color: transparent transparent var(--gray-100) transparent;
+    }
 
 .dropdown-item {
     font-size: 14px;
@@ -94,9 +95,11 @@ footer {
     padding: 24px 0;
     object-fit: contain;
 }
+
 .hero-content {
     padding: 24px 0;
 }
+
 .hero-content__header {
     color: var(--pink);
     font-size: 3.2rem;
@@ -130,6 +133,7 @@ footer {
     left: 50%;
     transform: translateX(-50%);
 }
+
 .transition-transform {
     transition: transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
     user-select: auto;
@@ -202,10 +206,10 @@ footer {
     transform: translateY(-150%);
 }
 
-.arrow-right:hover,
-.arrow-left:hover {
-    background-color: rgba(249, 249, 249, 0.8);
-}
+    .arrow-right:hover,
+    .arrow-left:hover {
+        background-color: rgba(249, 249, 249, 0.8);
+    }
 
 /* blog phim */
 .arrow_more {
@@ -216,6 +220,7 @@ footer {
     from {
         transform: translateY(-2px);
     }
+
     to {
         transform: translateY(4px);
     }
@@ -235,4 +240,25 @@ footer {
     left: 31%;
     transform: translate(-50%, -50%);
     transform: rotate(45deg);
+}
+
+/* Modal */
+.screen {
+    width: 16rem;
+    font-size: 55px;
+}
+
+.cinema-seat {
+    background-color: rgb(114, 46, 209);
+}
+
+.cinema-seat__active {
+    background-color: var(--pink);
+    box-shadow: 0px 2px 2px rgb(248, 248, 248);
+}
+
+.one-seat,
+.zero-seat,
+.more-seat {
+    display: none;
 }

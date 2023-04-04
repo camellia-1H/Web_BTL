@@ -19,7 +19,11 @@
             <p class="fs-13">@phim.TheLoai</p>
            @foreach (var lich in phim.MaLichChieus)
                 {
-                <button class="btn bd-blue bg-transparent cl-blue fs-14 fb-500 p-2 br-10 mt-lg-4 mt-1 mr-3">
+                <button
+                    data-toggle="modal"
+                    data-target=".modal-lgg"
+                    class="btn bd-blue bg-transparent cl-blue fs-14 fb-500 p-2 br-10 mt-lg-4 mt-1 mr-3"
+                >
                     @lich.ThoiGianChieu.Value.ToString("hh\\:mm")
                     <span> ~ </span>
                     @lich.ThoiGianKetThuc.Value.ToString("hh\\:mm")
