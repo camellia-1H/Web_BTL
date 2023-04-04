@@ -1,0 +1,238 @@
+/* header */
+.header {
+    height: var(--header-height);
+    background-color: var(--white);
+    border-bottom: 1px solid var(--pink);
+}
+
+/* Navbar */
+.navbar {
+    padding: 0;
+}
+
+.navbar.active {
+    display: flex;
+}
+
+.nav-link {
+    padding: 10px 0 10px 32px;
+    color: var(--gray-600);
+}
+
+.nav-link:hover {
+    color: var(--gray-900);
+}
+.dropdown-menu {
+    top: 50px;
+    right: 0;
+    font-weight: 500;
+    min-width: 150px;
+    background-color: var(--gray-100);
+    box-shadow: 2px 2px 4px 0 var(--gray-300);
+    border: none;
+}
+
+.dropdown-menu::after {
+    content: '';
+    position: absolute;
+    top: -28px;
+    left: 32px;
+    width: 0;
+    height: 0;
+    border-width: 16px;
+    border-style: solid;
+    border-color: transparent transparent var(--gray-100) transparent;
+}
+
+.dropdown-item {
+    font-size: 14px;
+    padding: 8px;
+}
+
+.user-avatar {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 8px;
+    object-fit: cover;
+}
+
+/* Mobile nav */
+.mobile-menu-close_btn,
+.mobile-menu_btn {
+    width: 40px;
+    height: 40px;
+    font-size: 3rem;
+    cursor: pointer;
+    display: none;
+}
+
+/* footer */
+footer {
+    /* display: none; */
+}
+
+.logo-footer {
+    width: 40px;
+    height: 40px;
+    background-color: var(--pinkmomo);
+}
+
+.logo-contact {
+    width: 130px;
+    height: 39px;
+}
+
+/* Main */
+.main {
+    margin-top: var(--header-height);
+}
+
+/* Hero unit */
+
+.hero-image {
+    padding: 24px 0;
+    object-fit: contain;
+}
+.hero-content {
+    padding: 24px 0;
+}
+.hero-content__header {
+    color: var(--pink);
+    font-size: 3.2rem;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+/* Film Detail */
+.bg-img {
+    height: 480px;
+    opacity: 0.2;
+    overflow: hidden;
+    background-image: url('https://img.cdn.vncdn.io/cinema/img/911111623966317-wPJKyDq1F9b4VtpF9dz8FPKVuS5.jpg');
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    background-position: right -200px top;
+}
+
+.film-container {
+    min-height: 480px;
+}
+
+.film-des {
+    inset: 0px;
+    margin: auto;
+    width: 100%;
+}
+
+.btn-playing {
+    cursor: pointer;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.transition-transform {
+    transition: transform 0.15s cubic-bezier(0.165, 0.84, 0.44, 1);
+    user-select: auto;
+    pointer-events: auto;
+}
+
+.zoom:hover {
+    transform: scale(1.12);
+}
+
+/* hệ thống film */
+
+.bd-hover:hover {
+    border-color: var(--gray-300);
+    box-shadow: 0 2px 3px rgb(139, 139, 139);
+}
+
+.logo-theater {
+    width: 56px;
+    height: 56px;
+}
+
+.logo-location {
+    width: 20px;
+}
+
+/* phim chiếu  */
+.bg-film {
+    min-height: 500px;
+    overflow: hidden;
+    background-image: url('https://static.mservice.io/img/momo-upload-api-210701105436-637607336767432408.jpg');
+    background-size: contain;
+}
+
+.film__item-zoom:hover {
+    transform: scale(1.04);
+}
+/* 
+.film__item-zoom::before {
+    transition: all 0.3s ease-in-out;
+} */
+
+.arrow-right {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 20;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: -10px;
+    transform: translateY(-150%);
+}
+
+.arrow-left {
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    z-index: 20;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    transform: translateY(-150%);
+}
+
+.arrow-right:hover,
+.arrow-left:hover {
+    background-color: rgba(249, 249, 249, 0.8);
+}
+
+/* blog phim */
+.arrow_more {
+    animation: more 0.7s infinite;
+}
+
+@keyframes more {
+    from {
+        transform: translateY(-2px);
+    }
+    to {
+        transform: translateY(4px);
+    }
+}
+
+.blog-active {
+    color: black;
+    border-bottom: 2px solid var(--pink) !important;
+}
+/* Lich chieu */
+.film-45k {
+    width: 45px;
+    height: 1.2rem;
+    text-align: center;
+    position: absolute;
+    top: 12%;
+    left: 31%;
+    transform: translate(-50%, -50%);
+    transform: rotate(45deg);
+}

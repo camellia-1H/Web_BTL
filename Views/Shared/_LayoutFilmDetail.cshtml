@@ -1,0 +1,582 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cinema</title>
+    <link rel="icon" type="image/x-icon" href="../LayoutTicket/assets/img/favicon.ico" />
+
+    <!-- bootstrap 4 -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+          integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- internal -->
+    <link rel="stylesheet" href="../LayoutTicket/css/base.css" />
+    <link rel="stylesheet" href="../LayoutTicket/css/common.css" />
+    <link rel="stylesheet" href="../LayoutTicket/css/style.css" />
+    <link rel="stylesheet" href="../LayoutTicket/css/responsive.css" />
+    <!-- slick slider -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Header -->
+        @await Html.PartialAsync("_PartialHeader")
+        <!-- End Header -->
+        <!-- container -->
+        <div class="row mt-60">
+            <div class="duong-dan-den-trang"></div>
+            <!--  START about film -->
+            <div class="container-fluid bg-black-opa cl-gray-100">
+                <div class="film-wrapper">
+                    @RenderBody();
+                </div>
+            </div>
+            <!--  END about film -->
+
+            <div class="container d-flex flex-wrap p-0">
+                <div class="col-lg-8 col-12 p-0">
+                    <!-- begin lịch chiếu -->
+                    <div class="container-fluid bg-white p-25-0">
+                        <div class="container">
+                            <section class="pt-5 pb-5">
+                                <div class="d-flex flex-column align-items-center mb-3">
+                                    <h2 class="cl-black fb-600 fs-24">Lịch chiếu</h2>
+                                </div>
+                                <div class="bd-gray-300_2 br-10 bg-white">
+                                    <div class="p-0-16 pt-4 bd-bottom-300">
+                                        <div class="d-flex align-items-center">
+                                            <h4 class="fs-16 fb-500 cl-black mr-4">Vị trí</h4>
+                                            <div class="btn bd-pink cl-pink d-flex align-items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg"
+                                                     fill="none"
+                                                     viewBox="0 0 24 24"
+                                                     stroke="currentColor"
+                                                     width="18"
+                                                     class="fs-10">
+                                                    <path stroke-linecap="round"
+                                                          stroke-linejoin="round"
+                                                          stroke-width="2"
+                                                          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                                                          class="jsx-26aa69a85bd7d47c"></path>
+                                                    <path stroke-linecap="round"
+                                                          stroke-linejoin="round"
+                                                          stroke-width="2"
+                                                          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                                                          class="jsx-26aa69a85bd7d47c"></path>
+                                                </svg>
+                                                <span class="fs-14">Hà Nội</span>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex mb-3 mt-4">
+                                            <div class="d-flex flex-column align-items-center br-10 bd-gray-300 over-hid mr-3">
+                                                <div class="bg-pink cl-gray-100 fs-16 fb-600 p-6-25">26</div>
+                                                <div class="fs-12 cl-pink p-6-0">Hôm nay</div>
+                                            </div>
+                                            <div class="d-flex flex-column align-items-center br-10 bd-gray-300 over-hid mr-3">
+                                                <div class="bg-gray-200 cl-black fs-16 fb-600 p-6-25">27</div>
+                                                <div class="fs-12 cl-gray-400 p-6-0">Ngày mai</div>
+                                            </div>
+                                            <div class="d-flex flex-column align-items-center br-10 bd-gray-300 over-hid mr-3">
+                                                <div class="bg-gray-200 cl-black fs-16 fb-600 p-6-25">28</div>
+                                                <div class="fs-12 cl-gray-400 p-6-0">Ngày kia</div>
+                                            </div>
+                                            <div class="d-flex flex-column align-items-center br-10 bd-gray-300 over-hid mr-3">
+                                                <div class="bg-gray-200 cl-black fs-16 fb-600 p-6-25">29</div>
+                                                <div class="fs-12 cl-gray-400 p-6-0">Ngày kìa</div>
+                                            </div>
+                                            <div class="d-flex flex-column align-items-center br-10 bd-gray-300 over-hid mr-3">
+                                                <div class="bg-gray-200 cl-black fs-16 fb-600 p-6-25">30</div>
+                                                <div class="fs-12 cl-gray-400 p-6-0">Ngày kĩa</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pt-4 pb-5">
+                                        <div class="bd-bottom-300 flex-1 p-4">
+                                            <div class="cinema-item d-flex flex-column text-center">
+                                                <div class="d-flex">
+                                                    <div class="over-hid bd-gray-300 br-10">
+                                                        <img class="p-2"
+                                                             width="55"
+                                                             src="https://static.mservice.io/placebrand/s/momo-upload-api-190709165424-636982880641515855.jpg"
+                                                             alt="" />
+                                                    </div>
+                                                    <div class="fb-500">
+                                                        <div class="fs-16 mt-2 cl-black">CGV</div>
+                                                        <p class="fs-12 ml-3">Địa chỉ lấy từ db</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="pt-3">
+                                                <button type="button"
+                                                        data-toggle="modal"
+                                                        data-target=".modal-lgg"
+                                                        class="btn bd-blue bg-transparent cl-blue fs-14 fb-500 p-2 br-10 mt-lg-4 mt-1 mr-3">
+                                                    20:00 ~ 21:19
+                                                </button>
+                                                <button type="button"
+                                                        data-toggle="modal"
+                                                        data-target=".modal-lgg"
+                                                        class="btn bd-blue bg-transparent cl-blue fs-14 fb-500 p-2 br-10 mt-lg-4 mt-1 mr-3">
+                                                    21:00 ~ 22:10
+                                                </button>
+                                                <button type="button"
+                                                        data-toggle="modal"
+                                                        data-target=".modal-lgg"
+                                                        class="btn bd-blue bg-transparent cl-blue fs-14 fb-500 p-2 br-10 mt-lg-4 mt-1 mr-3">
+                                                    23:00 ~ 01:19
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="bd-bottom-300 flex-1 p-4">
+                                            <div class="cinema-item d-flex flex-column text-center">
+                                                <div class="d-flex">
+                                                    <div class="over-hid bd-gray-300 br-10">
+                                                        <img class="p-2"
+                                                             width="50"
+                                                             src="https://static.mservice.io/blogscontents/momo-upload-api-210604170617-637584231772974269.png"
+                                                             alt="" />
+                                                    </div>
+                                                    <div class="fb-500">
+                                                        <div class="fs-16 mt-2 cl-black">Lotte</div>
+                                                        <p class="fs-12 ml-3">Địa chỉ lấy từ db</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="pt-3">
+                                                <button type="button"
+                                                        data-toggle="modal"
+                                                        data-target=".modal-lgg"
+                                                        class="btn bd-blue bg-transparent cl-blue fs-14 fb-500 p-2 br-10 mt-lg-4 mt-1 mr-3">
+                                                    20:00 ~ 21:19
+                                                </button>
+                                                <button type="button"
+                                                        data-toggle="modal"
+                                                        data-target=".modal-lgg"
+                                                        class="btn bd-blue bg-transparent cl-blue fs-14 fb-500 p-2 br-10 mt-lg-4 mt-1 mr-3">
+                                                    21:00 ~ 22:10
+                                                </button>
+                                                <button type="button"
+                                                        data-toggle="modal"
+                                                        data-target=".modal-lgg"
+                                                        class="btn bd-blue bg-transparent cl-blue fs-14 fb-500 p-2 br-10 mt-lg-4 mt-1 mr-3">
+                                                    23:00 ~ 01:19
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="bd-bottom-300 flex-1 p-4">
+                                            <div class="cinema-item d-flex flex-column text-center">
+                                                <div class="d-flex">
+                                                    <div class="over-hid bd-gray-300 br-10">
+                                                        <img class="p-2"
+                                                             width="50"
+                                                             src="https://static.mservice.io/blogscontents/momo-upload-api-210604170453-637584230934981809.png"
+                                                             alt="" />
+                                                    </div>
+                                                    <div class="fb-500">
+                                                        <div class="fs-16 mt-2 cl-black">BHD Star</div>
+                                                        <p class="fs-12 ml-3">Địa chỉ lấy từ db</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="pt-3">
+                                                <button type="button"
+                                                        data-toggle="modal"
+                                                        data-target=".modal-lgg"
+                                                        class="btn bd-blue bg-transparent cl-blue fs-14 fb-500 p-2 br-10 mt-lg-4 mt-1 mr-3">
+                                                    20:00 ~ 21:19
+                                                </button>
+                                                <button type="button"
+                                                        data-toggle="modal"
+                                                        data-target=".modal-lgg"
+                                                        class="btn bd-blue bg-transparent cl-blue fs-14 fb-500 p-2 br-10 mt-lg-4 mt-1 mr-3">
+                                                    21:00 ~ 22:10
+                                                </button>
+                                                <button type="button"
+                                                        data-toggle="modal"
+                                                        data-target=".modal-lgg"
+                                                        class="btn bd-blue bg-transparent cl-blue fs-14 fb-500 p-2 br-10 mt-lg-4 mt-1 mr-3">
+                                                    23:00 ~ 01:19
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="bd-bottom-300 flex-1 p-4">
+                                            <div class="cinema-item d-flex flex-column text-center">
+                                                <div class="d-flex">
+                                                    <div class="over-hid bd-gray-300 br-10">
+                                                        <img class="p-2"
+                                                             width="50"
+                                                             src="https://static.mservice.io/cinema/momo-upload-api-210813104719-637644484394328824.png"
+                                                             alt="" />
+                                                    </div>
+                                                    <div class="fb-500">
+                                                        <div class="fs-16 mt-2 cl-black">Beta</div>
+                                                        <p class="fs-12 ml-3">Địa chỉ lấy từ db</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="pt-3">
+                                                <button type="button"
+                                                        data-toggle="modal"
+                                                        data-target=".modal-lgg"
+                                                        class="btn bd-blue bg-transparent cl-blue fs-14 fb-500 p-2 br-10 mt-lg-4 mt-1 mr-3">
+                                                    20:00 ~ 21:19
+                                                </button>
+                                                <button type="button"
+                                                        data-toggle="modal"
+                                                        data-target=".modal-lgg"
+                                                        class="btn bd-blue bg-transparent cl-blue fs-14 fb-500 p-2 br-10 mt-lg-4 mt-1 mr-3">
+                                                    21:00 ~ 22:10
+                                                </button>
+                                                <button type="button"
+                                                        data-toggle="modal"
+                                                        data-target=".modal-lgg"
+                                                        class="btn bd-blue bg-transparent cl-blue fs-14 fb-500 p-2 br-10 mt-lg-4 mt-1 mr-3">
+                                                    23:00 ~ 01:19
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-center mt-5 mb-1">
+                                    <button class="btn btn-pink btn--primary fs-15 fb-600">Xem tất cả</button>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <!-- end lịch chiếu -->
+                    <!-- begin BLOG PHIM -->
+                    <div class="container-fluid p-25-0">
+                        <div class="container">
+                            <section class="pt-5 pb-5">
+                                <div class="d-flex flex-column align-items-center mb-3">
+                                    <h2 class="cl-pink fb-600 fs-24">Blog phim ảnh</h2>
+                                    <p class="fs-14 cl-gray-600">Tổng hợp và Review các bộ phim hot, bom tấn, phim chiếu rạp hay mỗi ngày</p>
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <button class="btn--blog blog-active fs-15 fb-500 bg-transparent cl-gray-600 p-0-8 mr-5">Mới nhất</button>
+                                    <button class="btn--blog fs-15 fb-500 bg-transparent cl-gray-600 p-0-8">Phim sắp chiếu</button>
+                                </div>
+                                <div class="list-blog-container d-flex justify-content-between flex-wrap mt-5">
+                                    <div class="blog-item col-lg-3 col-md-6 col-12 pr-2 pl-2 mr--4 ml--4 mb-4">
+                                        <div class="w-100">
+                                            <img class="w-100 d-block"
+                                                 src="https://static.mservice.io/blogscontents/s770x370/momo-upload-api-220131203141-637792579015243080.jpg"
+                                                 alt="" />
+                                        </div>
+                                        <div class="pt-4">
+                                            <a>
+                                                <h3 class="cl-black fs-15 hover-pink">Phim Hàn Quốc 2022 đầy hứa hẹn với đủ thể loại hấp dẫn</h3>
+                                            </a>
+                                            <p class="fs-12">207.7k lượt xem</p>
+                                        </div>
+                                    </div>
+                                    <div class="blog-item col-lg-3 col-md-6 col-12 pr-2 pl-2 mr--4 ml--4 mb-4">
+                                        <div class="w-100">
+                                            <img class="w-100 d-block"
+                                                 src="https://static.mservice.io/blogscontents/s770x370/momo-upload-api-220607210130-637902324900234426.jpg"
+                                                 alt="" />
+                                        </div>
+                                        <div class="pt-4">
+                                            <a>
+                                                <h3 class="cl-black fs-15 hover-pink">Top phim xã hội đen Thái Lan cực mãn nhãn</h3>
+                                            </a>
+                                            <p class="fs-12">20.9k lượt xem</p>
+                                        </div>
+                                    </div>
+                                    <div class="blog-item col-lg-3 col-md-6 col-12 pr-2 pl-2 mr--4 ml--4 mb-4">
+                                        <div class="w-100">
+                                            <img class="w-100 d-block"
+                                                 src="https://static.mservice.io/blogscontents/s770x370/momo-upload-api-220607134938-637902065784846992.jpg"
+                                                 alt="" />
+                                        </div>
+                                        <div class="pt-4">
+                                            <a>
+                                                <h3 class="cl-black fs-15 hover-pink">Những tác phẩm điện ảnh về La Mã cổ đại không thể bỏ lỡ</h3>
+                                            </a>
+                                            <p class="fs-12">7.1k lượt xem</p>
+                                        </div>
+                                    </div>
+                                    <div class="blog-item col-lg-3 col-md-6 col-12 pr-2 pl-2 mr--4 ml--4 mb-4">
+                                        <div class="w-100">
+                                            <img class="w-100 d-block"
+                                                 src="https://static.mservice.io/blogscontents/s770x370/momo-upload-api-220531150301-637896061816285843.jpg"
+                                                 alt="" />
+                                        </div>
+                                        <div class="pt-4">
+                                            <a>
+                                                <h3 class="cl-black fs-15 hover-pink">Hướng dẫn xem phim Marvel dành cho người mới bắt đầu</h3>
+                                            </a>
+                                            <p class="fs-12">888.7k lượt xem</p>
+                                        </div>
+                                    </div>
+                                    <div class="blog-item col-lg-3 col-md-6 col-12 pr-2 pl-2 mr--4 ml--4 mb-4">
+                                        <div class="w-100">
+                                            <img class="w-100 d-block"
+                                                 src="https://static.mservice.io/blogscontents/s770x370/momo-upload-api-220316121128-637830294882378239.jpg"
+                                                 alt="" />
+                                        </div>
+                                        <div class="pt-4">
+                                            <a>
+                                                <h3 class="cl-black fs-15 hover-pink">Top phim về trí tuệ nhân tạo đáng xem nhất</h3>
+                                            </a>
+                                            <p class="fs-12">20.7k lượt xem</p>
+                                        </div>
+                                    </div>
+                                    <div class="blog-item col-lg-3 col-md-6 col-12 pr-2 pl-2 mr--4 ml--4 mb-4">
+                                        <div class="w-100">
+                                            <img class="w-100 d-block"
+                                                 src="https://static.mservice.io/blogscontents/s770x370/momo-upload-api-220303223255-637819435755878284.jpg"
+                                                 alt="" />
+                                        </div>
+                                        <div class="pt-4">
+                                            <a>
+                                                <h3 class="cl-black fs-15 hover-pink">Top phim về sát nhân hàng loạt khiến bạn rùng rợn</h3>
+                                            </a>
+                                            <p class="fs-12">7.7k lượt xem</p>
+                                        </div>
+                                    </div>
+                                    <div class="blog-item col-lg-3 col-md-6 col-12 pr-2 pl-2 mr--4 ml--4 mb-4">
+                                        <div class="w-100">
+                                            <img class="w-100 d-block"
+                                                 src="https://static.mservice.io/blogscontents/s770x370/momo-upload-api-220227210930-637815929708943600.jpg"
+                                                 alt="" />
+                                        </div>
+                                        <div class="pt-4">
+                                            <a>
+                                                <h3 class="cl-black fs-15 hover-pink">Top phim hay nhất của Stephen King bạn nên xem ngay</h3>
+                                            </a>
+                                            <p class="fs-12">7k lượt xem</p>
+                                        </div>
+                                    </div>
+                                    <div class="blog-item col-lg-3 col-md-6 col-12 pr-2 pl-2 mr--4 ml--4 mb-4">
+                                        <div class="w-100">
+                                            <img class="w-100 d-block"
+                                                 src="https://static.mservice.io/blogscontents/s770x370/momo-upload-api-220315105814-637829386948842072.jpg"
+                                                 alt="" />
+                                        </div>
+                                        <div class="pt-4">
+                                            <a>
+                                                <h3 class="cl-black fs-15 hover-pink">Danh sách phim hay Netflix tháng 3/2022</h3>
+                                            </a>
+                                            <p class="fs-12">7.7k lượt xem</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-center">
+                                    <button class="btn btn-rounded btn-pink fs-15">
+                                        <svg xmlns="http://www.w3.org/2000/svg"
+                                             class="mr-2 arrow_more"
+                                             width="15"
+                                             viewBox="0 0 20 20"
+                                             fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                  d="M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414 0l-6-6a1 1 0 111.414-1.414L9 14.586V3a1 1 0 012 0v11.586l4.293-4.293a1 1 0 011.414 0z"
+                                                  clip-rule="evenodd"></path>
+                                        </svg>
+                                        Xem thêm
+                                    </button>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                    <!-- end BLOG PHIM -->
+                </div>
+                <div class="col-lg-4 col-12 p-0">
+                    <div class="container-fluid p-60-0">
+                        <div class="container">
+                            <section class="list-film">
+                                <div class="d-flex justify-content-center">
+                                    <h2 class="fs-24 cl-black fb-600">Phim đang chiếu nè</h2>
+                                </div>
+
+                                <div class="">
+                                    <div class="list-film__item p-0 d-flex col-12 bd-bottom-300">
+                                        <a href="/filmDetail.html" class="col-4 p-3">
+                                            <div class="over-hid br-5">
+                                                <img class="w-100 d-block film__item-zoom transition-transform"
+                                                     src="https://img.cdn.vncdn.io/cinema/img/2297701952378539-pc75KETPdVnqHWCum3mFnmM0nSn.jpg"
+                                                     alt="" />
+                                            </div>
+                                        </a>
+
+                                        <div class="col-8">
+                                            <div class="pt-5">
+                                                <a href="">
+                                                    <h2 class="cl-black fs-14">Lúc đó tôi đã chuyển sinh thành Slime</h2>
+                                                </a>
+                                            </div>
+                                            <h3 class="fs-13 cl-gray-600">Đấm nhau, Lãng mạn</h3>
+                                        </div>
+                                    </div>
+                                    <div class="list-film__item d-flex p-0 col-12 bd-bottom-300">
+                                        <a href="" class="col-4 p-3">
+                                            <div class="over-hid br-5">
+                                                <img class="w-100 d-block film__item-zoom transition-transform"
+                                                     src="https://traffic-edge36.cdn.vncdn.io/cinema/img/2995715139969098-conmemay.jpg"
+                                                     alt="" />
+                                            </div>
+                                        </a>
+                                        <div class="col-8">
+                                            <div class="pt-5">
+                                                <a href="">
+                                                    <h2 class="cl-black fs-14">Thanh gươm diệt quỷ: <br />Đường điến làng thợ rèn</h2>
+                                                </a>
+                                            </div>
+                                            <h3 class="fs-13 cl-gray-600">Chém nhau, Phiêu lưu</h3>
+                                        </div>
+                                    </div>
+                                    <div class="list-film__item d-flex p-0 col-12 bd-bottom-300">
+                                        <a href="" class="col-4 p-3">
+                                            <div class="over-hid br-5">
+                                                <img class="w-100 d-block film__item-zoom transition-transform"
+                                                     src="https://traffic-edge29.cdn.vncdn.io/cinema/img/78933142651798299-vrFVPBprPlKKmIcpuLVu8SluI9j.jpg"
+                                                     alt="" />
+                                            </div>
+                                        </a>
+                                        <div class="col-8">
+                                            <div class="pt-5">
+                                                <a href="">
+                                                    <h2 class="cl-black fs-14">Shazam!Cơn thịnh nộ của các Vị Thần</h2>
+                                                </a>
+                                            </div>
+                                            <h3 class="fs-13 cl-gray-600">Hài, Bắn la de</h3>
+                                        </div>
+                                    </div>
+                                    <div class="list-film__item d-flex p-0 col-12 bd-bottom-300">
+                                        <a href="" class="col-4 p-3">
+                                            <div class="over-hid br-5">
+                                                <img class="w-100 d-block film__item-zoom transition-transform"
+                                                     src="https://traffic-edge17.cdn.vncdn.io/cinema/img/1942230700177970-5.jpg"
+                                                     alt="" />
+                                            </div>
+                                        </a>
+                                        <div class="col-8">
+                                            <div class="pt-5">
+                                                <a href="">
+                                                    <h2 class="cl-black fs-14">Khóa chặt cửa nào Suzume</h2>
+                                                </a>
+                                            </div>
+                                            <h3 class="fs-13 cl-gray-600">Hoạt hình, Phiêu lưu</h3>
+                                        </div>
+                                    </div>
+                                    <div class="list-film__item d-flex p-0 col-12 bd-bottom-300">
+                                        <a href="" class="col-4 p-3">
+                                            <div class="over-hid br-5">
+                                                <img class="w-100 d-block film__item-zoom transition-transform"
+                                                     src="https://static.mservice.io/cinema/s256x384/momo-upload-api-220615151657-637909030177665504.jpg"
+                                                     alt="" />
+                                            </div>
+                                        </a>
+                                        <div class="col-8">
+                                            <div class="pt-5">
+                                                <a href="">
+                                                    <h2 class="cl-black fs-14">Đấm nhau ở đa vũ trụ</h2>
+                                                </a>
+                                            </div>
+                                            <h3 class="fs-13 cl-gray-600">Đấm nhau chứ gì nữa, Lãng mạn</h3>
+                                        </div>
+                                    </div>
+                                    <div class="list-film__item d-flex p-0 col-12 bd-bottom-300">
+                                        <a href="" class="col-4 p-3">
+                                            <div class="over-hid br-5">
+                                                <img class="w-100 d-block film__item-zoom transition-transform"
+                                                     src="https://traffic-edge35.cdn.vncdn.io/cinema/img/2992441971565431-wbJcJQ4L1OcgTDi8ydGXFiGpXX5.jpg"
+                                                     alt="" />
+                                            </div>
+                                        </a>
+                                        <div class="col-8">
+                                            <div class="pt-5">
+                                                <a href="">
+                                                    <h2 class="cl-black fs-14">13 Nghi thức trừ tà</h2>
+                                                </a>
+                                            </div>
+                                            <h3 class="fs-13 cl-gray-600">Kinh dị, Lãng mạn</h3>
+                                        </div>
+                                    </div>
+                                    <div class="list-film__item d-flex p-0 col-12 bd-bottom-300">
+                                        <a href="" class="col-4 p-3">
+                                            <div class="over-hid br-5">
+                                                <img class="w-100 d-block film__item-zoom transition-transform"
+                                                     src="https://traffic-edge15.cdn.vncdn.io/cinema/img/3523323972506924-conmemay.jpg"
+                                                     alt="" />
+                                            </div>
+                                        </a>
+                                        <div class="col-8">
+                                            <div class="pt-5">
+                                                <a href="">
+                                                    <h2 class="cl-black fs-14">Tri kỷ</h2>
+                                                </a>
+                                            </div>
+                                            <h3 class="fs-13 cl-gray-600">Chính kịch</h3>
+                                        </div>
+                                    </div>
+                                    <div class="list-film__item d-flex p-0 col-12 bd-bottom-300">
+                                        <a href="" class="col-4 p-3">
+                                            <div class="over-hid br-5">
+                                                <img class="w-100 d-block film__item-zoom transition-transform"
+                                                     src="https://traffic-edge32.cdn.vncdn.io/cinema/img/90225202119197600-imzUKQbSanWDJcCsY9QKmk9qmDp.jpg"
+                                                     alt="" />
+                                            </div>
+                                        </a>
+                                        <div class="col-8">
+                                            <div class="pt-5">
+                                                <a href="">
+                                                    <h2 class="cl-black fs-14">Transformer: Quái thú trỗi dậy</h2>
+                                                </a>
+                                            </div>
+                                            <h3 class="fs-13 cl-gray-600">Hành động, Đấm nhau</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Main -->
+        <!-- Footer -->
+        @await Html.PartialAsync("_PartialFooter")
+        <!-- End Footer -->
+    </div>
+
+    <!-- bootstrap 4 -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+    <!-- Jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <!-- js -->
+    <!-- slick slider jquery -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="../LayoutTicket/js/script.js"></script>
+</body>
+</html>

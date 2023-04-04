@@ -1,0 +1,735 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cinema</title>
+    <link rel="icon" type="image/x-icon" href="~/LayoutTicket/assets/img/favicon.ico" />
+
+        <!-- bootstrap 4 -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous" />
+
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+            integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+        <!-- internal -->
+        <link rel="stylesheet" href="~/LayoutTicket/css/base.css" />
+        <link rel="stylesheet" href="~/LayoutTicket/css/common.css" />
+        <link rel="stylesheet" href="~/LayoutTicket/css/style.css" />
+        <link rel="stylesheet" href="~/LayoutTicket/css/responsive.css" />
+        <!-- slick slider -->
+        <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    </head>
+    <body>
+        <div class="wrapper">
+            <!-- Header -->
+          @await Html.PartialAsync("_PartialHeader")
+            <!-- End Header -->
+
+            <!-- Main -->
+            <div class="main bg-gray-200">
+                <!-- Hero Unit -->
+                <section class="container-fluid">
+                    <div class="container pt-5 pb-5">
+                        <dic class="d-flex flex-wrap">
+                            <div class="hero-content col-12 col-md-6 col-lg-6">
+                                <h1 class="hero-content__header">Đặt vé ngay tại MoLo</h1>
+                                <div class="hero-content__para d-flex">
+                                    <i class="fa-solid fa-check"></i>
+                                    <p class="ml-4">Du hí các rạp, <strong>trải nghiệm xem phim hay</strong></p>
+                                </div>
+                                <div class="hero-content__para d-flex">
+                                    <i class="fa-solid fa-check"></i>
+                                    <p class="ml-4"><strong>Đặt vé tức tiếp,</strong> thanh toán xong ngay</p>
+                                </div>
+                                <div class="hero-content__para d-flex">
+                                    <i class="fa-solid fa-check"></i>
+                                    <p class="ml-4">Gợi ý dữ liệu, <strong>suất chiếu gần đây</strong></p>
+                                </div>
+                                <div class="hero-content__para d-flex">
+                                    <i class="fa-solid fa-check"></i>
+                                    <p class="ml-4">Lịch sử đặt vé <strong>Được lưu lại ngay</strong></p>
+                                </div>
+
+                                <a class="btn btn-lg btn--large btn-pink mt-4 fb-600" href="#" role="button">Đặt vé ngay</a>
+                            </div>
+                            <div class="hero-image d-flex align-items-center col-12 col-md-6 col-lg-6">
+                                <img src="~/LayoutTicket/assets/img/Hero.jpg" alt="" class="w-100" />
+                            </div>
+                        </dic>
+                    </div>
+                </section>
+                <!-- End Hero Unit -->
+
+                <!-- Phim đang chiếu -->
+                 @await Html.PartialAsync("_PartialSlider")
+                <!-- End Phim đang chiếu -->
+
+                <!-- begin Lịch chiếu -->
+                <div class="container-fluid bg-white p-40-0">
+                    <div class="container">
+                        <section class="pt-5 pb-5">
+                            <div class="d-flex flex-column align-items-center mb-3">
+                                <h2 class="cl-pink fb-600 fs-24">Lịch chiếu</h2>
+                            </div>
+                            <div class="bd-gray-300_2 br-10 bg-white">
+                                <div class="p-0-16 pt-4 bd-bottom-300">
+                                    <div class="d-flex align-items-center">
+                                        <h4 class="fs-16 fb-500 cl-black mr-4">Vị trí</h4>
+                                        <div class="btn bd-pink cl-pink d-flex align-items-center">
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke="currentColor"
+                                                width="18"
+                                                class="fs-10">
+                                                <path
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    stroke-width="2"
+                                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                                                    class="jsx-26aa69a85bd7d47c"></path>
+                                                <path
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    stroke-width="2"
+                                                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                                                    class="jsx-26aa69a85bd7d47c"></path>
+                                            </svg>
+                                            <span class="fs-14">Hà Nội</span>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        @await Component.InvokeAsync("RapMenu");
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-wrap h40 over-scY pt-5 pb-5">
+                                    @RenderBody();
+                                </div>
+                            </div>
+                            <div class="text-center mt-5 mb-1">
+                                <button class="btn btn-pink btn--primary fs-15 fb-600">Xem tất cả</button>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <!-- end Lịch chiếu -->
+
+                <!-- HỆ THỐNG RAP -->
+                <div class="container-fluid bg-main p-40-0">
+                    <div class="container">
+                        <section class="section pt-5 pb-5">
+                            <div class="d-flex flex-column align-items-center mb-3">
+                                <h2 class="cl-pink fb-600 fs-24">Hệ thống rạp chiếu phim</h2>
+                                <p class="fs-14 cl-gray-600">Danh sách hệ thống rạp chiếu phim lớn có mặt khắp cả nước</p>
+                            </div>
+                            <div class="d-flex flex-lg-wrap flex-md-wrap flex-wrap justify-content-between">
+                                <a class="theater-container col-lg-6 col-md-6 col-sm-12 d-flex pr-2 pl-2 mr--4 ml--4 mb-4">
+                                    <div
+                                        class="theater d-flex align-items-center justify-content-between p-4 bg-white br-10 bd-gray-300 flex-1 bd-hover">
+                                        <img
+                                            class="logo-theater"
+                                            src="https://static.mservice.io/placebrand/s/momo-upload-api-190709165424-636982880641515855.jpg"
+                                            alt="" />
+                                        <div class="d-flex flex-column flex-1 ml-4">
+                                            <h2 class="cl-pink fb-600 fs-18 m-0">CGV</h2>
+                                            <p class="fs-14 cl-gray-500 mb-2">Hệ thống rạp chiếu phim lớn nhất</p>
+                                            <div class="d-flex">
+                                                <div>
+                                                    <span class="mr--5"
+                                                        ><svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            fill="#FCD34D"
+                                                            viewBox="0 0 24 24"
+                                                            stroke="currentColor"
+                                                            width="16">
+                                                            <path
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                stroke-width="1"
+                                                                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="mr--5"
+                                                        ><svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            fill="#FCD34D"
+                                                            viewBox="0 0 24 24"
+                                                            stroke="currentColor"
+                                                            width="16">
+                                                            <path
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                stroke-width="1"
+                                                                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="mr--5"
+                                                        ><svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            fill="#FCD34D"
+                                                            viewBox="0 0 24 24"
+                                                            stroke="currentColor"
+                                                            width="16">
+                                                            <path
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                stroke-width="1"
+                                                                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="mr--5"
+                                                        ><svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            fill="#FCD34D"
+                                                            viewBox="0 0 24 24"
+                                                            stroke="currentColor"
+                                                            width="16">
+                                                            <path
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                stroke-width="1"
+                                                                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="mr--5"
+                                                        ><svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            fill="#FCD34D"
+                                                            viewBox="0 0 24 24"
+                                                            stroke="currentColor"
+                                                            width="16">
+                                                            <path
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                stroke-width="1"
+                                                                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                                <p class="fs-13 cl-gray-600 ml-3">1326 đánh giá</p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <div class="logo-location">
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        class="mr-1 inline-block h-4 w-4"
+                                                        fill="none"
+                                                        viewBox="0 0 24 24"
+                                                        stroke="currentColor">
+                                                        <path
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="2"
+                                                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                                        <path
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="2"
+                                                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                                    </svg>
+                                                </div>
+                                                <span class="fs-13 align-self-start">86 rạp</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="theater-container col-lg-6 col-md-6 col-sm-12 d-flex pr-2 pl-2 mr--4 ml--4 mb-4">
+                                    <div
+                                        class="theater d-flex align-items-center justify-content-between p-4 bg-white br-10 bd-gray-300 flex-1 bd-hover">
+                                        <img
+                                            class="logo-theater"
+                                            src="https://static.mservice.io/blogscontents/momo-upload-api-210604170617-637584231772974269.png"
+                                            alt="" />
+                                        <div class="d-flex flex-column flex-1 ml-4">
+                                            <h2 class="cl-pink fb-600 fs-18 m-0">Lotte Cinema</h2>
+                                            <p class="fs-14 cl-gray-500 mb-2">Hệ thống rạp chiếu phim từ Hàn Quốc</p>
+                                            <div class="d-flex">
+                                                <div>
+                                                    <span class="mr--5"
+                                                        ><svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            fill="#FCD34D"
+                                                            viewBox="0 0 24 24"
+                                                            stroke="currentColor"
+                                                            width="16">
+                                                            <path
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                stroke-width="1"
+                                                                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="mr--5"
+                                                        ><svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            fill="#FCD34D"
+                                                            viewBox="0 0 24 24"
+                                                            stroke="currentColor"
+                                                            width="16">
+                                                            <path
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                stroke-width="1"
+                                                                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="mr--5"
+                                                        ><svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            fill="#FCD34D"
+                                                            viewBox="0 0 24 24"
+                                                            stroke="currentColor"
+                                                            width="16">
+                                                            <path
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                stroke-width="1"
+                                                                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="mr--5"
+                                                        ><svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            fill="#FCD34D"
+                                                            viewBox="0 0 24 24"
+                                                            stroke="currentColor"
+                                                            width="16">
+                                                            <path
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                stroke-width="1"
+                                                                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="mr--5"
+                                                        ><svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            fill="#FCD34D"
+                                                            viewBox="0 0 24 24"
+                                                            stroke="currentColor"
+                                                            width="16">
+                                                            <path
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                stroke-width="1"
+                                                                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                                <p class="fs-13 cl-gray-600 ml-3">1450 đánh giá</p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <div class="logo-location">
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        class="mr-1 inline-block h-4 w-4"
+                                                        fill="none"
+                                                        viewBox="0 0 24 24"
+                                                        stroke="currentColor">
+                                                        <path
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="2"
+                                                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                                        <path
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="2"
+                                                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                                    </svg>
+                                                </div>
+                                                <span class="fs-13 align-self-start">54 rạp</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="theater-container col-lg-6 col-md-6 col-sm-12 d-flex pr-2 pl-2 mr--4 ml--4 mb-4">
+                                    <div
+                                        class="theater d-flex align-items-center justify-content-between p-4 bg-white br-10 bd-gray-300 flex-1 bd-hover">
+                                        <img
+                                            class="logo-theater"
+                                            src="https://static.mservice.io/cinema/momo-upload-api-211123095138-637732578984425272.png"
+                                            alt="" />
+                                        <div class="d-flex flex-column flex-1 ml-4">
+                                            <h2 class="cl-pink fb-600 fs-18 m-0">Galaxy Cinema</h2>
+                                            <p class="fs-14 cl-gray-500 mb-2">Mang ho ly hút đến gần bạn</p>
+                                            <div class="d-flex">
+                                                <div>
+                                                    <span class="mr--5"
+                                                        ><svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            fill="#FCD34D"
+                                                            viewBox="0 0 24 24"
+                                                            stroke="currentColor"
+                                                            width="16">
+                                                            <path
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                stroke-width="1"
+                                                                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="mr--5"
+                                                        ><svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            fill="#FCD34D"
+                                                            viewBox="0 0 24 24"
+                                                            stroke="currentColor"
+                                                            width="16">
+                                                            <path
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                stroke-width="1"
+                                                                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="mr--5"
+                                                        ><svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            fill="#FCD34D"
+                                                            viewBox="0 0 24 24"
+                                                            stroke="currentColor"
+                                                            width="16">
+                                                            <path
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                stroke-width="1"
+                                                                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="mr--5"
+                                                        ><svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            fill="#FCD34D"
+                                                            viewBox="0 0 24 24"
+                                                            stroke="currentColor"
+                                                            width="16">
+                                                            <path
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                stroke-width="1"
+                                                                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="mr--5"
+                                                        ><svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            fill="#FCD34D"
+                                                            viewBox="0 0 24 24"
+                                                            stroke="currentColor"
+                                                            width="16">
+                                                            <path
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                stroke-width="1"
+                                                                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                                <p class="fs-13 cl-gray-600 ml-3">589 đánh giá</p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <div class="logo-location">
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        class="mr-1 inline-block h-4 w-4"
+                                                        fill="none"
+                                                        viewBox="0 0 24 24"
+                                                        stroke="currentColor">
+                                                        <path
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="2"
+                                                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                                        <path
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="2"
+                                                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                                    </svg>
+                                                </div>
+                                                <span class="fs-13 align-self-start">46 rạp</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="theater-container col-lg-6 col-md-6 col-sm-12 d-flex pr-2 pl-2 mr--4 ml--4 mb-4">
+                                    <div
+                                        class="theater d-flex align-items-center justify-content-between p-4 bg-white br-10 bd-gray-300 flex-1 bd-hover">
+                                        <img
+                                            class="logo-theater"
+                                            src="https://static.mservice.io/cinema/momo-upload-api-210813104719-637644484394328824.png"
+                                            alt="" />
+                                        <div class="d-flex flex-column flex-1 ml-4">
+                                            <h2 class="cl-pink fb-600 fs-18 m-0">Beta Cinema</h2>
+                                            <p class="fs-14 cl-gray-500 mb-2">Hệ thống rạp chiếu Beta Cinema</p>
+                                            <div class="d-flex">
+                                                <div>
+                                                    <span class="mr--5"
+                                                        ><svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            fill="#FCD34D"
+                                                            viewBox="0 0 24 24"
+                                                            stroke="currentColor"
+                                                            width="16">
+                                                            <path
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                stroke-width="1"
+                                                                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="mr--5"
+                                                        ><svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            fill="#FCD34D"
+                                                            viewBox="0 0 24 24"
+                                                            stroke="currentColor"
+                                                            width="16">
+                                                            <path
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                stroke-width="1"
+                                                                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="mr--5"
+                                                        ><svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            fill="#FCD34D"
+                                                            viewBox="0 0 24 24"
+                                                            stroke="currentColor"
+                                                            width="16">
+                                                            <path
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                stroke-width="1"
+                                                                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="mr--5"
+                                                        ><svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            fill="#FCD34D"
+                                                            viewBox="0 0 24 24"
+                                                            stroke="currentColor"
+                                                            width="16">
+                                                            <path
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                stroke-width="1"
+                                                                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="mr--5"
+                                                        ><svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            fill="#FCD34D"
+                                                            viewBox="0 0 24 24"
+                                                            stroke="currentColor"
+                                                            width="16">
+                                                            <path
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                stroke-width="1"
+                                                                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                                <p class="fs-13 cl-gray-600 ml-3">1978 đánh giá</p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <div class="logo-location">
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        class="mr-1 inline-block h-4 w-4"
+                                                        fill="none"
+                                                        viewBox="0 0 24 24"
+                                                        stroke="currentColor">
+                                                        <path
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="2"
+                                                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                                        <path
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="2"
+                                                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                                    </svg>
+                                                </div>
+                                                <span class="fs-13 align-self-start">105 rạp</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="theater-container col-lg-6 col-md-6 col-sm-12 d-flex pr-2 pl-2 mr--4 ml--4 mb-4">
+                                    <div
+                                        class="theater d-flex align-items-center justify-content-between p-4 bg-white br-10 bd-gray-300 flex-1 bd-hover">
+                                        <img
+                                            class="logo-theater"
+                                            src="https://img.mservice.io/momo_app_v2/new_version/img/THAO.MAI/DcineLogo.png"
+                                            alt="" />
+                                        <div class="d-flex flex-column flex-1 ml-4">
+                                            <h2 class="cl-pink fb-600 fs-18 m-0">DCINE</h2>
+                                            <p class="fs-14 cl-gray-500 mb-2">Hệ thống rạp chiếu DCINE</p>
+                                            <div class="d-flex">
+                                                <div>
+                                                    <span class="mr--5"
+                                                        ><svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            fill="#FCD34D"
+                                                            viewBox="0 0 24 24"
+                                                            stroke="currentColor"
+                                                            width="16">
+                                                            <path
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                stroke-width="1"
+                                                                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="mr--5"
+                                                        ><svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            fill="#FCD34D"
+                                                            viewBox="0 0 24 24"
+                                                            stroke="currentColor"
+                                                            width="16">
+                                                            <path
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                stroke-width="1"
+                                                                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="mr--5"
+                                                        ><svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            fill="#FCD34D"
+                                                            viewBox="0 0 24 24"
+                                                            stroke="currentColor"
+                                                            width="16">
+                                                            <path
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                stroke-width="1"
+                                                                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="mr--5"
+                                                        ><svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            fill="#FCD34D"
+                                                            viewBox="0 0 24 24"
+                                                            stroke="currentColor"
+                                                            width="16">
+                                                            <path
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                stroke-width="1"
+                                                                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                                                        </svg>
+                                                    </span>
+                                                    <span class="mr--5"
+                                                        ><svg
+                                                            xmlns="http://www.w3.org/2000/svg"
+                                                            fill="#FCD34D"
+                                                            viewBox="0 0 24 24"
+                                                            stroke="currentColor"
+                                                            width="16">
+                                                            <path
+                                                                stroke-linecap="round"
+                                                                stroke-linejoin="round"
+                                                                stroke-width="1"
+                                                                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                                <p class="fs-13 cl-gray-600 ml-3">189 đánh giá</p>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <div class="logo-location">
+                                                    <svg
+                                                        xmlns="http://www.w3.org/2000/svg"
+                                                        class="mr-1 inline-block h-4 w-4"
+                                                        fill="none"
+                                                        viewBox="0 0 24 24"
+                                                        stroke="currentColor">
+                                                        <path
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="2"
+                                                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                                        <path
+                                                            stroke-linecap="round"
+                                                            stroke-linejoin="round"
+                                                            stroke-width="2"
+                                                            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                                    </svg>
+                                                </div>
+                                                <span class="fs-13 align-self-start">39 rạp</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="text-center mt-5">
+                                <button class="btn btn-pink btn--primary fs-15 fb-600">Tìm rạp chiếu</button>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <!--end HỆ THỐNG RAP -->
+
+                <!-- begin BLOG PHIM -->
+               @await Html.PartialAsync("_PartialBlog")
+                <!-- end BLOG PHIM -->
+            </div>
+            <!-- End Main -->
+
+            <!-- Footer -->
+            @await Html.PartialAsync("_PartialFooter")
+            <!-- End Footer -->
+        </div>
+
+        <!-- bootstrap 4 -->
+        <script
+            src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+
+        <!-- Jquery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+        <!-- js -->
+        <!-- slick slider jquery -->
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="~/LayoutTicket/js/script.js"></script>
+    </body>
+</html>

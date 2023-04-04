@@ -1,0 +1,34 @@
+﻿@using Web_BTL.Models.PhimLichModels;
+@{
+    ViewData["Title"] = "Home Page";
+    Layout = "~/Views/Shared/_LayoutTicket.cshtml";
+}
+@model PhimLichModels;
+@foreach (var phim in Model.Phims)
+{
+    <div class="col-lg-6 col-12 d-flex mt-lg-4 mt-4">
+    <div class="col-lg-4 col-2">
+            <a asp-controller="Home" asp-action="ChiTietPhim" asp-route-maPhim="@phim.MaPhim" class="d-block w-100">
+            <img class="w-100"
+                 src="@phim.AnhDaiDien"
+                 alt="" />
+        </a>
+    </div>
+    <div class="pt-5">
+            <h3 class="cl-black fs-16">@phim.TenPhim</h3>
+            <p class="fs-13">@phim.TheLoai</p>
+           @foreach (var lich in phim.MaLichChieus)
+                {
+                <button class="btn bd-blue bg-transparent cl-blue fs-14 fb-500 p-2 br-10 mt-lg-4 mt-1 mr-3">
+                    @lich.ThoiGianChieu.Value.ToString("hh\\:mm")
+                    <span> ~ </span>
+                    @lich.ThoiGianKetThuc.Value.ToString("hh\\:mm")
+                </button>
+                }
+    </div>
+
+</div>
+}
+
+
+

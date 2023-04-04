@@ -1,0 +1,17 @@
+﻿@model IEnumerable<TRap>
+@foreach (var item in Model)
+{
+        <div class="cinema-item d-flex flex-column p-3">
+        <a class="p-2 d-flex flex-column text-center" asp-controller="Home" asp-action="PhimTheoRap" asp-route-marap="@item.MaRap">
+            <div class="br-10 over-hid bd-gray-300" style="width: 60px">
+                <img width="100%"
+                 src="@item.AnhRap"
+                 alt="" />
+            </div>
+
+            <div class="fs-12 mt-2">@item.TenRap</div>
+        </a>
+    </div>
+}
+
+
